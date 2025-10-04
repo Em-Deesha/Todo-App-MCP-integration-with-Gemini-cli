@@ -1,6 +1,6 @@
-# Todo List App with FastAPI
+# Todo List App with FastAPI and MCP Integration
 
-A complete todo list application with a modern web interface and REST API built with FastAPI.
+A complete todo list application with a modern web interface, REST API built with FastAPI, and Model Context Protocol (MCP) integration for Gemini CLI.
 
 ## Features
 
@@ -20,7 +20,16 @@ A complete todo list application with a modern web interface and REST API built 
 - Beautiful gradient design with animations
 - Mobile-friendly responsive layout
 
+### MCP Integration
+- **Model Context Protocol (MCP) server** for AI assistant integration
+- **Gemini CLI support** - Control your todos through natural language
+- **FastMCP framework** for seamless AI integration
+- **Complete tool set** for todo management via AI
+- **Natural language interface** for todo operations
+
 ## Setup
+
+### Basic Setup
 
 1. Activate the virtual environment:
    ```bash
@@ -41,6 +50,36 @@ A complete todo list application with a modern web interface and REST API built 
    ```bash
    uvicorn main:app --reload
    ```
+
+### MCP Integration Setup
+
+For AI assistant integration with Gemini CLI:
+
+1. **Start both services** (FastAPI app + MCP server):
+   ```bash
+   ./start_services.sh
+   ```
+
+2. **Configure Gemini CLI** by adding to your Gemini config:
+   ```json
+   {
+     "mcpServers": {
+       "todo-mcp-server": {
+         "command": "/path/to/your/project/venv/bin/python",
+         "args": ["mcp_server.py"],
+         "cwd": "/path/to/your/project"
+       }
+     }
+   }
+   ```
+
+3. **Test with Gemini CLI**:
+   - "Show me all my todos"
+   - "Create a new todo called 'Learn FastAPI'"
+   - "Mark todo as complete"
+   - "What's my completion rate?"
+
+See [MCP_INTEGRATION_GUIDE.md](MCP_INTEGRATION_GUIDE.md) for detailed setup instructions.
 
 ## API Endpoints
 

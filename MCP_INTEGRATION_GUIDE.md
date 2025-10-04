@@ -41,16 +41,15 @@ Add the MCP server configuration to your Gemini CLI config:
 {
   "mcpServers": {
     "todo-mcp-server": {
-      "command": "python",
+      "command": "/home/adeesha-waheed/Documents/mcp/venv/bin/python",
       "args": ["mcp_server.py"],
-      "cwd": "/home/adeesha-waheed/Documents/mcp",
-      "env": {
-        "PYTHONPATH": "/home/adeesha-waheed/Documents/mcp/venv/lib/python3.11/site-packages"
-      }
+      "cwd": "/home/adeesha-waheed/Documents/mcp"
     }
   }
 }
 ```
+
+**Important**: Use the full path to your virtual environment's Python interpreter to ensure all dependencies are available.
 
 ### 4. Available MCP Tools
 
